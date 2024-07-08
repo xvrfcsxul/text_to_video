@@ -72,7 +72,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'runningstrsite.wsgi.application'
 
-#CSRF_TRUSTED_ORIGINS = ['*']
+
+CSRF_TRUSTED_ORIGINS = ['https://*.ngrok-free.app/']
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 DATABASES = {
