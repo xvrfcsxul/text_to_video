@@ -14,7 +14,7 @@ def create_video(message:str):
 
     for t in range(72):
         frame.fill(0)
-        x -= int(len(message)/2)
+        x -= 2
         cv2.putText(frame, message, (x, y), font, font_scale, font_color, font_thickness)
         out.write(frame)
 
