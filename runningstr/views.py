@@ -5,10 +5,10 @@ from .utils import create_video
 
 def video_view(request):
     if request.method == 'POST':
-        text = request.POST.get('input_text')  # Получаем текст из поля ввода
-        create_video(text)  # Передаем текст в функцию example_func
+        text = request.POST.get('input_text')
+        create_video(text)
         video = open('video.mp4', 'rb')
         video_model = Video(text=text)
         video_model.save()
         return FileResponse(video, content_type='video/mp4', as_attachment=True)
-    return render(request, 'home.html')  # Отображаем шаблон с формой ввода
+    return render(request, 'home.html')
